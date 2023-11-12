@@ -26,4 +26,26 @@ body {
   border-radius: 50%;
   background-color: orange;
   box-shadow: 0 0 70px yellow;
+}
+
+.ground {
+  position: relative;
+  height: 40vh;
+  background-color: #403535;
+}
+
+.grass {
+  position: absolute;
+  top: 0;
+  height: 200px;
+  width: 100%;
+  background-color: lime;
+}
+
+.road {
+  position: absolute;
+  top: 30px;
+  height: 120px;
+  width: 100%;
+  background-color: gray;
 }/*# sourceMappingURL=style.css.map */
