@@ -49,3 +49,69 @@ body {
 	width: 100%;
 	background-color: gray;
 }
+
+.car {
+	position: absolute;
+	top: -15px;
+	left: 200px;
+	height: 70px;
+	width: 150px;
+	background-color: tomato;
+	border-radius: 15px;
+}
+
+.car::before,
+.car::after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	width: 40px;
+	height: 35px;
+	background-color: tomato;
+}
+
+.car::after {
+	right: -20px;
+	border-top-right-radius: 10px;
+}
+
+.car::before {
+	left: -20px;
+}
+
+.wheel {
+	position: absolute;
+	bottom: -10px;
+	width: 35px;
+	height: 35px;
+	background-color: black;
+	border-radius: 50%;
+	border: 2px dashed #999;
+}
+
+.front-wheel {
+	right: 8px;
+	z-index: 1;
+}
+
+.rear-wheel {
+	left: 8px;
+}
+
+.window {
+	position: absolute;
+	top: 5px;
+	height: 30px;
+	width: 50px;
+	background-color: blue;
+}
+
+.front-window {
+	right: 0;
+	border-top-right-radius: 9px;
+}
+
+.rear-window {
+	left: 0;
+	border-top-left-radius: 9px;
+}
