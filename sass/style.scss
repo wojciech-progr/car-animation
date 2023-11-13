@@ -9,12 +9,14 @@ body {
 	font-size: 30px;
 	color: #fff;
 	background-color: #333;
+	overflow: hidden;
 }
 
 .sky {
 	position: relative;
 	height: 60vh;
 	background-color: royalblue;
+	animation: sky 8s linear 1;
 }
 
 .sun {
@@ -26,6 +28,7 @@ body {
 	border-radius: 50%;
 	background-color: orange;
 	box-shadow: 0 0 70px yellow;
+	animation: sun 8s linear 1;
 }
 
 .ground {
@@ -58,6 +61,7 @@ body {
 	width: 150px;
 	background-color: tomato;
 	border-radius: 15px;
+	animation: car 8s linear 1;
 }
 
 .car::before,
@@ -87,6 +91,7 @@ body {
 	background-color: black;
 	border-radius: 50%;
 	border: 2px dashed #999;
+	animation: wheel 2s linear infinite;
 }
 
 .front-wheel {
@@ -114,4 +119,54 @@ body {
 .rear-window {
 	left: 0;
 	border-top-left-radius: 9px;
+}
+
+@keyframes sun {
+	0% {
+		top: 1000px;
+	}
+	40% {
+		top: 100px;
+	}
+	60% {
+		top: 100px;
+	}
+	100% {
+		top: 1000px;
+	}
+}
+
+@keyframes sky {
+	0% {
+		background-color: black;
+	}
+	40% {
+		background-color: royalblue;
+	}
+	60% {
+		background-color: royalblue;
+	}
+	100% {
+		background-color: black;
+	}
+}
+
+@keyframes car {
+	from {
+		left: -500px;
+	}
+
+	to {
+		left: 1500px;
+	}
+}
+
+@keyframes wheel {
+	from {
+		transform: rotate(0);
+	}
+
+	to {
+		transform: rotate(360deg);
+	}
 }
